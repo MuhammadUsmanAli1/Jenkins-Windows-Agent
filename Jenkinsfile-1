@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh 'docker container rm $$(docker ps -aq) -f'
+        //sh 'docker container rm $$(docker ps -aq) -f'
         //sh 'docker rm $(docker ps -a -f status=created -q)'
         //sh  'docker rm $(docker ps -a -q)'
         sh 'docker run -d --name apache -p 80:80 httpd'
